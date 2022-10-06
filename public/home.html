@@ -44,7 +44,7 @@
                     background: #f2f2f2;" required>
                 </div>
             </div>
-        
+
             <div class="form-group15">
                 <label for="q15">Select your gender</label>
                 <div class="radio-group15">
@@ -57,7 +57,7 @@
                     <input type="radio" name="q15" id="q15r3" value="Other"><label for="q15r3"> Other </label>
                 </div>
             </div>
-    
+
             <div class="form-group16">
                 <label for="q16">Are you a student</label>
                 <div class="radio-group16">
@@ -67,9 +67,9 @@
                     <input type="radio" name="q16" id="q16r2" value="No"><label for="q16r2"> No </label>
                 </div>
             </div>
-    
+
             <div class="form-group17">
-                <label for="q17">Name of your college</label>
+                <label for="q17">Name of your institution</label>
                 <div class="radio-group17">
                     <input type="text" name="q17" id="q17r1" style="width: 60%;
                     padding: 10px;
@@ -80,9 +80,49 @@
                     background: #f2f2f2;">
                 </div>
             </div>
-    
+
+            <div class="form-group23">
+                <label for="q23">Course Name</label>
+                <div class="radio-group23">
+                    <input type="text" name="q23" id="q23r1" style="width: 60%;
+                    padding: 10px;
+                    margin: 5px 0 0 0;
+                    display: inline-block;
+                    border: solid rgb(167, 166, 166) 1px;
+                    background: #dcffdc;
+                    background: #f2f2f2;">
+                </div>
+            </div>
+
+            <div class="form-group24">
+                <label for="q24">Branch</label>
+                <div class="radio-group24">
+                    <input type="text" name="q24" id="q24r1" style="width: 60%;
+                    padding: 10px;
+                    margin: 5px 0 0 0;
+                    display: inline-block;
+                    border: solid rgb(167, 166, 166) 1px;
+                    background: #dcffdc;
+                    background: #f2f2f2;">
+                </div>
+            </div>
+
+            <div class="form-group25">
+                <label for="q25">Year of study</label>
+                <div class="radio-group25">
+                    <input type="number" name="q25" id="q25r1" style="width: 30%;
+                    padding: 10px;
+                    margin: 5px 0 0 0;
+                    display: inline-block;
+                    border: solid rgb(167, 166, 166) 1px;
+                    background: #dcffdc;
+                    background: #f2f2f2;">
+                </div>
+            </div>
+
             <div class="form-group18">
-                <label for="q18">Are you working</label>
+                <label for="q18">Are you working? If yes, please specify your designation and years of
+                    experience</label>
                 <div class="radio-group18">
                     <input type="radio" name="q18" id="q18r1" value="Yes"><label for="q18r1"> Yes </label>
                 </div>
@@ -90,7 +130,7 @@
                     <input type="radio" name="q18" id="q18r2" value="No"><label for="q18r2"> No </label>
                 </div>
             </div>
-    
+
             <div class="form-group19">
                 <label for="q19">Enter your designation</label>
                 <div class="radio-group19">
@@ -103,11 +143,11 @@
                     background: #f2f2f2;">
                 </div>
             </div>
-    
+
             <div class="form-group20">
-                <label for="q20">Name of the institution</label>
+                <label for="q20">Years of experience</label>
                 <div class="radio-group20">
-                    <input type="text" name="q20" id="q20r1" style="width: 60%;
+                    <input type="number" name="q20" id="q20r1" style="width: 30%;
                     padding: 10px;
                     margin: 5px 0 0 0;
                     display: inline-block;
@@ -116,7 +156,7 @@
                     background: #f2f2f2;">
                 </div>
             </div>
-    
+
             <div class="form-group21">
                 <label for="q21">State</label>
                 <div class="radio-group21">
@@ -129,7 +169,7 @@
                     background: #f2f2f2;" required>
                 </div>
             </div>
-    
+
             <div class="form-group22">
                 <label for="q22">Country</label>
                 <div class="radio-group22">
@@ -343,13 +383,175 @@
                 </div>
             </div>
             <br>
-            <h4 style="font-size: 16px;">By clicking the button below, <br> 1. You agree that your answers are accurate
-                <br> 2. You agree to use this data for research purpose</h3>
-                <div id="button_container">
-                    <button id="submit" onclick="save()"> SUBMIT </button>
-                </div>
-
         </div>
+
+        <div style="align-items: center;">
+            <h1 style="text-align: center; color: blue;">------------------------</h1>
+        </div>
+
+        <header>
+            <h2 id="title">Anxiety disorder Assessment Questions</h2>
+        </header>
+        <div id="container">
+            <br>
+            <div class="form-group26">
+                <label for="q26">Feeling nervous, anxious or on edge ?</label>
+                <div class="radio-group26">
+                    <input type="radio" name="q26" id="q26r1" value=0><label for="q26r1"> Not at all </label>
+                </div>
+                <div class="radio-group26">
+                    <input type="radio" name="q26" id="q26r2" value=1><label for="q26r2"> Several days </label>
+                </div>
+                <div class="radio-group26">
+                    <input type="radio" name="q26" id="q26r3" value=2><label for="q26r3"> More than half the days
+                    </label>
+                </div>
+                <div class="radio-group26">
+                    <input type="radio" name="q26" id="q26r4" value=3><label for="q26r4"> Nearly every day <label>
+                </div>
+            </div>
+            <br>
+            <div class="form-group27">
+                <label for="q27">Not being able to stop or control worrying ?</label>
+                <div class="radio-group27">
+                    <input type="radio" name="q27" id="q27r1" value=0><label for="q27r1"> Not at all </label>
+                </div>
+                <div class="radio-group27">
+                    <input type="radio" name="q27" id="q27r2" value=1><label for="q27r2"> Several days </label>
+                </div>
+                <div class="radio-group27">
+                    <input type="radio" name="q27" id="q27r3" value=2><label for="q27r3"> More than half the days
+                    </label>
+                </div>
+                <div class="radio-group27">
+                    <input type="radio" name="q27" id="q27r4" value=3><label for="q27r4"> Nearly every day <label>
+                </div>
+            </div>
+            <br>
+            <div class="form-group28">
+                <label for="q28">Worrying too much about different things ?</label>
+                <div class="radio-group28">
+                    <input type="radio" name="q28" id="q28r1" value=0><label for="q28r1"> Not at all </label>
+                </div>
+                <div class="radio-group28">
+                    <input type="radio" name="q28" id="q28r2" value=1><label for="q28r2"> Several days </label>
+                </div>
+                <div class="radio-group28">
+                    <input type="radio" name="q28" id="q28r3" value=2><label for="q28r3"> More than half the days
+                    </label>
+                </div>
+                <div class="radio-group28">
+                    <input type="radio" name="q28" id="q28r4" value=3><label for="q28r4"> Nearly every day <label>
+                </div>
+            </div>
+            <br>
+            <div class="form-group29">
+                <label for="q29">Trouble relaxing ?</label>
+                <div class="radio-group29">
+                    <input type="radio" name="q29" id="q29r1" value=0><label for="q29r1"> Not at all </label>
+                </div>
+                <div class="radio-group29">
+                    <input type="radio" name="q29" id="q29r2" value=1><label for="q29r2"> Several days </label>
+                </div>
+                <div class="radio-group29">
+                    <input type="radio" name="q29" id="q29r3" value=2><label for="q29r3"> More than half the days
+                    </label>
+                </div>
+                <div class="radio-group29">
+                    <input type="radio" name="q29" id="q29r4" value=3><label for="q29r4"> Nearly every day <label>
+                </div>
+            </div>
+            <br>
+            <div class="form-group30">
+                <label for="q30">Being so restless that it is hard to sit still ?</label>
+                <div class="radio-group30">
+                    <input type="radio" name="q30" id="q30r1" value=0><label for="q30r1"> Not at all </label>
+                </div>
+                <div class="radio-group30">
+                    <input type="radio" name="q30" id="q30r2" value=1><label for="q30r2"> Several days </label>
+                </div>
+                <div class="radio-group30">
+                    <input type="radio" name="q30" id="q30r3" value=2><label for="q30r3"> More than half the days
+                    </label>
+                </div>
+                <div class="radio-group30">
+                    <input type="radio" name="q30" id="q30r4" value=3><label for="q30r4"> Nearly every day <label>
+                </div>
+            </div>
+            <br>
+            <div class="form-group31">
+                <label for="q31">Becoming easily annoyed or irritable ?</label>
+                <div class="radio-group31">
+                    <input type="radio" name="q31" id="q31r1" value=0><label for="q31r1"> Not at all </label>
+                </div>
+                <div class="radio-group31">
+                    <input type="radio" name="q31" id="q31r2" value=1><label for="q31r2"> Several days </label>
+                </div>
+                <div class="radio-group31">
+                    <input type="radio" name="q31" id="q31r3" value=2><label for="q31r3"> More than half the days
+                    </label>
+                </div>
+                <div class="radio-group31">
+                    <input type="radio" name="q31" id="q31r4" value=3><label for="q31r4"> Nearly every day <label>
+                </div>
+            </div>
+            <br>
+            <div class="form-group32">
+                <label for="q32">Feeling afraid as if something awful might happen ?</label>
+                <div class="radio-group32">
+                    <input type="radio" name="q32" id="q32r1" value=0><label for="q32r1"> Not at all </label>
+                </div>
+                <div class="radio-group32">
+                    <input type="radio" name="q32" id="q32r2" value=1><label for="q32r2"> Several days </label>
+                </div>
+                <div class="radio-group32">
+                    <input type="radio" name="q32" id="q32r3" value=2><label for="q32r3"> More than half the days
+                    </label>
+                </div>
+                <div class="radio-group32">
+                    <input type="radio" name="q32" id="q32r4" value=3><label for="q32r4"> Nearly every day <label>
+                </div>
+            </div>
+            <br>
+        </div>
+
+        <div style="align-items: center;">
+            <h1 style="text-align: center; color: blue;">------------------------</h1>
+        </div>
+
+        <div id="container">
+            <div class="form-group33">
+                <label for="q33">Do you have any existing mental conditions ? (Eg:depression)</label>
+                <div class="radio-group33">
+                    <input type="radio" name="q33" id="q33r1" value="Yes"><label for="q33r1"> Yes </label>
+                </div>
+                <div class="radio-group33">
+                    <input type="radio" name="q33" id="q33r2" value="No"><label for="q33r2"> No </label>
+                </div>
+            </div>
+
+            <div class="form-group34">
+                <label for="q34">If yes, what is the existing mental condition?</label>
+                <div class="radio-group34">
+                    <input type="text" name="q34" id="q34r1" style="width: 60%;
+                    padding: 10px;
+                    margin: 5px 0 0 0;
+                    display: inline-block;
+                    border: solid rgb(167, 166, 166) 1px;
+                    background: #dcffdc;
+                    background: #f2f2f2;">
+                </div>
+            </div>
+        </div>
+
+
+        <h4 style="font-size: 16px;">By clicking the button below, <br> 1. You agree that your answers are accurate
+            <br> 2. You agree to use this data for research purpose
+        </h4>
+        <div id="button_container">
+            <button id="submit" onclick="save()"> SUBMIT </button>
+        </div>
+
     </main>
 </body>
 

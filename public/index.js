@@ -18,15 +18,17 @@ var val_age = ""
 var val_gender = ""
 var val_is_a_student = ""
 var val_name_of_college = ""
+var val_course_name = ""
+var val_branch = ""
+var val_year_of_study = ""
 var val_is_working = ""
 var val_designation = ""
-var val_name_of_institution = ""
+var val_years_of_experience = ""
+//var val_name_of_institution = ""
 var val_state = ""
 var val_country = ""
 
 function validate() {
-    var nameBox = document.getElementById('q13r1')
-    var ageBox = document.getElementById('q14r1')
     if (val_name.trim() == "") {
         alert("Enter a valid name")
         return false
@@ -60,9 +62,18 @@ function getPrimaryDetails() {
             status_d2 = 1
         }
     }
-    
+
     var nameOfCollegeBox = document.getElementById('q17r1')
     val_name_of_college = nameOfCollegeBox.value
+
+    var courseNameBox = document.getElementById('q23r1')
+    val_course_name = courseNameBox.value
+
+    var branchBox = document.getElementById('q24r1')
+    val_branch = branchBox.value
+
+    var yearOfStudyBox = document.getElementById('q25r1')
+    val_year_of_study = yearOfStudyBox.value
 
     var isWorkingResponse = document.getElementsByName('q18')
     for (var radio of isWorkingResponse) {
@@ -75,15 +86,18 @@ function getPrimaryDetails() {
     var designationBox = document.getElementById('q19r1')
     val_designation = designationBox.value
 
-    var nameOfInstitutionBox = document.getElementById('q20r1')
-    val_name_of_institution = nameOfInstitutionBox.value
+    var yearsOfExperienceBox = document.getElementById('q20r1')
+    val_years_of_experience = yearsOfExperienceBox.value
+
+    // var nameOfInstitutionBox = document.getElementById('q20r1')
+    // val_name_of_institution = nameOfInstitutionBox.value
 
     var stateBox = document.getElementById('q21r1')
     val_state = stateBox.value
 
     var countryBox = document.getElementById('q22r1')
     val_country = countryBox.value
-   
+
     validate()
 }
 
@@ -91,11 +105,25 @@ function getPrimaryDetails() {
 var value1 = 0
 var value2 = 0
 
+//for anxiety qns
+var r1 = 0
+var r2 = 0
+var r3 = 0
+var r4 = 0
+var r5 = 0
+var r6 = 0
+var r7 = 0
+
+var r8 = 0
+
 var val_extraversion = 0
 var val_agreeableness = 0
 var val_conscientious = 0
 var val_neuroticism = 0
 var val_opennes_to_experience = 0
+var val_anxiety_level = 0
+var val_has_existing_mental_condition = ""
+var val_the_existing_mental_condition = ""
 
 var status_d1 = 0
 var status_d2 = 0
@@ -110,6 +138,16 @@ var status_q7 = 0
 var status_q8 = 0
 var status_q9 = 0
 var status_q10 = 0
+
+var status_q26 = 0
+var status_q27 = 0
+var status_q28 = 0
+var status_q29 = 0
+var status_q30 = 0
+var status_q31 = 0
+var status_q32 = 0
+
+var status_q33 = 0
 
 function getExtraversion() {
     var response = document.getElementsByName('q6');
@@ -226,22 +264,103 @@ function getOpennesToExperience() {
     val_opennes_to_experience = val_opennes_to_experience / 2
 }
 
-function save() {
-    getPrimaryDetails()
-    checkEmpty()
+function getAnxietyDisorder() {
+    var response = document.getElementsByName('q26');
+    var response2 = document.getElementsByName('q27');
+    var response3 = document.getElementsByName('q28');
+    var response4 = document.getElementsByName('q29');
+    var response5 = document.getElementsByName('q30');
+    var response6 = document.getElementsByName('q31');
+    var response7 = document.getElementsByName('q32');
+
+    var response8 = document.getElementsByName('q33');
+
+    for (var radio of response) {
+        if (radio.checked) {
+            r1 = parseFloat(radio.value);
+            status_q26 = 1
+        }
+    }
+
+    for (var radio of response2) {
+        if (radio.checked) {
+            r2 = parseFloat(radio.value);
+            status_q27 = 1
+        }
+    }
+
+    for (var radio of response3) {
+        if (radio.checked) {
+            r3 = parseFloat(radio.value);
+            status_q28 = 1
+        }
+    }
+    for (var radio of response4) {
+        if (radio.checked) {
+            r4 = parseFloat(radio.value);
+            status_q29 = 1
+        }
+    }
+    for (var radio of response5) {
+        if (radio.checked) {
+            r5 = parseFloat(radio.value);
+            status_q30 = 1
+        }
+    }
+    for (var radio of response6) {
+        if (radio.checked) {
+            r6 = parseFloat(radio.value);
+            status_q31 = 1
+        }
+    }
+    for (var radio of response7) {
+        if (radio.checked) {
+            r7 = parseFloat(radio.value);
+            status_q32 = 1
+        }
+    }
+    for (var radio of response8) {
+        if (radio.checked) {
+            r8 = radio.value
+            status_q33 = 1
+        }
+    }
+
+    val_anxiety_level = r1+r2+r3+r4+r5+r6+r7
+    val_has_existing_mental_condition = r8
+    
+    var existingMentalConditionBox = document.getElementById('q34r1')
+    val_the_existing_mental_condition = existingMentalConditionBox.value
 }
 
-function checkEmpty() {
-
+function save() {
+    getPrimaryDetails()
     getExtraversion()
     getAgreeableness()
     getConscientious()
     getNeuroticism()
     getOpennesToExperience()
+    getAnxietyDisorder()
+    checkEmpty()
+}
 
-    if(status_d1 == 0 || status_d2 == 0 || status_d3 == 0){
+function checkEmpty() {
+
+    if (status_d1 == 0 || status_d2 == 0 || status_d3 == 0) {
         alert("Please check if you have answered all the demographic details")
         return false
+    }
+    if (val_is_a_student == "Yes") {
+        if (val_name_of_college.trim() == "" || val_course_name.trim() == "" || val_branch.trim() == "" || val_year_of_study.trim() == "") {
+            alert("You said that you are a student. Please check if you have filled in the name of the institution, course name, branch and year of study")
+            return false
+        }
+    }
+    if (val_is_working == "Yes") {
+        if (val_designation.trim() == "" || val_years_of_experience.trim() == "") {
+            alert("You said that you are working. Please check if you have filled in your designation and years of experience")
+            return false
+        }
     }
     if (status_q1 == 0) {
         alert("Please check if you have answered question 1")
@@ -283,7 +402,17 @@ function checkEmpty() {
         alert("Please check if you have answered question 10")
         return false
     }
-    
+    if (status_q26 == 0 || status_q27 == 0 || status_q28 == 0 || status_q29 == 0 || status_q30 == 0 || status_q31 == 0 || status_q32 == 0 || status_q33 == 0) {
+        alert("Please check if you have answered all anxiety disorder assessment questions")
+        return false
+    }
+    if (val_has_existing_mental_condition == "Yes") {
+        if (val_the_existing_mental_condition.trim() == "") {
+            alert("You said that you have an existing mental condition. Please check if you have filled in your exisiting mental condition")
+            return false
+        }
+    }
+
     alert('Please wait..')
     uploadData()
 }
@@ -294,17 +423,20 @@ function uploadData() {
         age: val_age,
         gender: val_gender,
         isAStudent: val_is_a_student,
-        nameOfCollege : val_name_of_college,
-        isWorking : val_is_working,
-        designation : val_designation,
-        nameOfInstitution: val_name_of_institution,
+        nameOfCollege: val_name_of_college,
+        isWorking: val_is_working,
+        designation: val_designation,
+        //nameOfInstitution: val_name_of_institution,
         state: val_state,
         country: val_country,
         extraversion: val_extraversion,
         agreeableness: val_agreeableness,
         conscientious: val_conscientious,
         neuroticism: val_neuroticism,
-        openns_to_experience: val_opennes_to_experience
+        openns_to_experience: val_opennes_to_experience,
+        anxiety_level: val_anxiety_level,
+        hasExistingMentalCondition: val_has_existing_mental_condition,
+        theExisitingMentalCondition: val_the_existing_mental_condition
 
     }, (error) => {
         if (error) {

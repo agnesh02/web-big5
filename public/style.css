@@ -4,7 +4,7 @@ body {
     border: none;
     outline: none;
     /* background-color: #eee; */
-    background-color: #188032;
+    background-color: #007fe0;
     /* background-color: #dee2e6; */
     box-shadow: none;
     font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
@@ -84,7 +84,19 @@ textarea {
 .form-group19,
 .form-group20,
 .form-group21,
-.form-group22 {
+.form-group22,
+.form-group23,
+.form-group24,
+.form-group25,
+.form-group26,
+.form-group27,
+.form-group28,
+.form-group29,
+.form-group30,
+.form-group31,
+.form-group32,
+.form-group33,
+.form-group34 {
     padding: 8px 0;
     margin-bottom: 2px;
 }
@@ -110,7 +122,19 @@ textarea {
 .form-group19>label,
 .form-group20>label,
 .form-group21>label,
-.form-group22>label {
+.form-group22>label,
+.form-group23>label,
+.form-group24>label,
+.form-group25>label,
+.form-group26>label,
+.form-group27>label,
+.form-group28>label,
+.form-group29>label,
+.form-group30>label,
+.form-group31>label,
+.form-group32>label,
+.form-group33>label,
+.form-group34>label {
     margin-bottom: 8px;
     color: #191516;
     display: block;
