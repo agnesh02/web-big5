@@ -362,6 +362,14 @@ function checkEmpty() {
             return false
         }
     }
+    if(val_state.trim() == ""){
+        alert("Please enter where you are from (your state)")
+        return false
+    }
+    if(val_country.trim() == ""){
+        alert("Please enter where you are from (your country)")
+        return false
+    }
     if (status_q1 == 0) {
         alert("Please check if you have answered question 1")
         return false
@@ -413,7 +421,7 @@ function checkEmpty() {
         }
     }
 
-    alert('Please wait..')
+    alert('Please wait..Be patient..Please dont spam the sumbit button')
     uploadData()
 }
 
